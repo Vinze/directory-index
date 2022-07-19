@@ -1,0 +1,19 @@
+{
+  "name": "directory-index",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "watch": "npx tailwindcss -i ./stylesheet.css -o ./stylesheet.min.css --watch",
+    "build": "npx tailwindcss -i ./stylesheet.css -o ./stylesheet.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vinze/directory-index.git"
+  },
+  "keywords": [],
+  "author": "Vincent Bremer",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.1.6"
+  }
+}
