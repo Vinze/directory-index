@@ -1,5 +1,5 @@
 <?php
-$exclude = ['index.php', 'adminer', 'phpmyadmin', 'sqlbuddy'];
+$exclude = ['index.php', 'adminer', 'phpmyadmin', 'sqlbuddy', 'directory-index'];
 $filelist = scandir('.');
 $content = ['folders' => [], 'files' => []];
 
