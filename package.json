@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "watch": "npx tailwindcss -i ./stylesheet.css -o ./stylesheet.min.css --watch",
-    "build": "npx tailwindcss -i ./stylesheet.css -o ./stylesheet.min.css"
+    "dev": "npx tailwindcss -i ./stylesheet.css -o ./stylesheet.min.css --watch",
+    "prod": "npx tailwindcss -i ./stylesheet.css -o ./stylesheet.min.css --minify"
   },
   "repository": {
     "type": "git",
