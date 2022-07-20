@@ -1,6 +1,6 @@
 module.exports = {
   content: [
-    './index.php'
+    './scandir.php'
   ],
   theme: {
     extend: {},

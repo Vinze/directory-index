@@ -20,13 +20,13 @@ foreach ($filelist as $item) {
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="http://localhost/directory-index/stylesheet.min.css">
 </head>
-<body>
+<body class="bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300">
     <div class="container mx-auto max-w-2xl py-6 px-2">
-        <h1 class="mb-2 text-xl font-bold">Index of <?= $_SERVER['REQUEST_URI'] ?></h1>
+        <h1 class="mb-2 text-2xl font-bold">Index of <?= $_SERVER['REQUEST_URI'] ?></h1>
         <div class="md:columns-2">
             <?php foreach($content as $type => $files): ?>
                 <?php foreach($files as $file): ?>
-                    <a href="<?php echo $file; ?>" class="block py-1 hover:text-blue-600">
+                    <a href="<?php echo $file; ?>" class="block py-1 hover:opacity-75">
                         <?php if ($type == 'folder'): ?>
                             <svg xmlns="http://www.w3.org/2000/svg" class="inline-block h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
                                 <path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" />
