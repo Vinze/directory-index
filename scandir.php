@@ -1,4 +1,7 @@
 <?php
+$baseUrl = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].'/directory-index';
+$path = $_SERVER['REQUEST_URI'];
+
 $exclude = ['index.php', 'directory-index'];
 $filelist = scandir('.');
 $content = ['folders' => [], 'files' => []];
@@ -15,14 +18,15 @@ foreach ($filelist as $item) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Index of <?= $_SERVER['REQUEST_URI'] ?></title>
+    <title>Index of <?php echo $path ?></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="http://localhost/directory-index/stylesheet.min.css">
+    <link rel="stylesheet" href="<?php echo $baseUrl ?>/stylesheet.min.css">
+    <link rel="shortcut icon" href="<?php echo $baseUrl ?>/favicon.svg" type="image/x-icon">
 </head>
-<body class="bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300">
-    <div class="container mx-auto max-w-2xl py-6 px-2">
-        <h1 class="mb-2 text-2xl font-bold">Index of <?= $_SERVER['REQUEST_URI'] ?></h1>
+<body class="p-2 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300">
+    <div class="container mx-auto max-w-2xl p-4 bg-white shadow">
+        <h1 class="mb-2 text-2xl font-bold">Index of <?php echo $path ?></h1>
         <div class="md:columns-2">
             <?php foreach($content as $type => $files): ?>
                 <?php foreach($files as $file): ?>
