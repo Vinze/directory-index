@@ -24,7 +24,7 @@ foreach ($filelist as $item) {
     <link rel="stylesheet" href="<?php echo $baseUrl ?>/stylesheet.min.css">
     <link rel="shortcut icon" href="<?php echo $baseUrl ?>/favicon.svg" type="image/x-icon">
 </head>
-<body class="py-4 px-2 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300">
+<body class="min-h-screen py-4 px-2 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300">
     <div class="container mx-auto max-w-2xl p-4 pt-3 bg-white shadow dark:bg-gray-700 xl:max-w-4xl">
         <h1 class="mb-2 text-2xl font-bold">Index of <?php echo $path ?></h1>
         <div class="md:columns-2 xl:columns-3">
